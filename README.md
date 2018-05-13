@@ -64,6 +64,11 @@ You may find it helpful to consult the [Python controller code](https://github.c
 
 - changes are reflected in [LateralPositionControl](src/QuadControl.cpp#L234-L247)
 ```
+- Purpose is to calculate the desired acceleration in the global frame 
+- Based on desired lateral position/velocity/acceleration and current pose parameters
+- Ensure Contrain desired velocity
+- Determine PD controller + feedforward and
+- Finally constrain desired acceleration
 ```
 
 ### Implement yaw control in C++. ###
