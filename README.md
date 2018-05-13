@@ -14,6 +14,9 @@ You may find it helpful to consult the [Python controller code](https://github.c
 - [README](./README.md) 
 
 ## Implemented Controller ##
+- [QuadControlParams.txt](config/QuadControlParams.txt): This file contains the configuration for the controller. While the simulator is running, you can modify this file, and the simulator will "refresh" those parameters on the next loop execution.
+- [QuadControl.cpp](src/QuadControl.cpp): This is where all the fun is, but I should not say this because this file contains the implementation of the controller only. Most of the time needed to pass the scenarios is spend on the parameter tuning.
+
 
 ### Implemented body rate control in C++. ###
 #### The controller should be a proportional controller on body rates to commanded moments. The controller should take into account the moments of inertia of the drone when calculating the commanded moments. ####
