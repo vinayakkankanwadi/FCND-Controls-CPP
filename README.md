@@ -40,7 +40,7 @@ You may find it helpful to consult the [Python controller code](https://github.c
 - Based on a desired global lateral acceleration, the current attitude, and desired collective thrust
 - First we obtain current tilt from the rotation matrix R.
 - Then we compute the desired tilt by normalizing the desired acceleration by the thrust. 
-- Prevent drone flipping usub max-min constrain
+- Prevent drone flipping using max-min constrain
 - Determines the desired roll and pitch rate in the world frame
 - Finally, in order to output the desired roll and pitch rate in the body frame
 - Tuning kpBank and kpPQR(again until the drone flies more or less stable upward)
