@@ -76,6 +76,11 @@ You may find it helpful to consult the [Python controller code](https://github.c
 
 - changes are reflected in [YawControl](src/QuadControl.cpp#L266-L270)
 ```
+- Purpose is to calculate the desired yaw rate from the commanded yaw and the yaw parameters
+- Compute yaw delta between commanded and observed yaw values
+- Ensure you always travel the smallest angle from observed yaw to commanded yaw
+- We need to normalize the error using fmodf to account for angle wrap
+- Finally compute yaw rate with the proportional yaw constant
 ```
 
 ### Implement calculating the motor commands given commanded thrust and moments in C++. ###
@@ -83,6 +88,7 @@ You may find it helpful to consult the [Python controller code](https://github.c
 
 - changes are reflected in [GenerateMotorCommands](src/QuadControl.cpp#L71-L90)
 ```
+-
 ```
 
 ## Flight Evaluation ##
