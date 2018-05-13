@@ -88,7 +88,11 @@ You may find it helpful to consult the [Python controller code](https://github.c
 
 - changes are reflected in [GenerateMotorCommands](src/QuadControl.cpp#L71-L90)
 ```
--
+- Purpose is to calculate each motor command thrust from commanded collective thrust and commanded moment
+- The constants k_m and k_f are not given. Instead, the ration between them, kappa, is given.
+- The distance L is the distance from the center of the quad to one of the rotors.
+- Based on the input from the controller we can set the individual motor thrust commands.
+- F1, F2, F3, F4 to denote the individual thurst command for the front (left,right) and rear (left,right) motors.
 ```
 
 ## Flight Evaluation ##
