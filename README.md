@@ -55,8 +55,7 @@ You may find it helpful to consult the [Python controller code](https://github.c
 - Based on altitude(actual, setpoint), vertical velocity (setpoint, actual), vertical acceleration feed-forward
 - Ensure z velocity command is within limits
 - Then we compute Error integration part of the PID
-- Determine desired acceleration
-- Determine desired vertical acceleration in body frame and
+- Determine desired acceleration, vertical acceleration in body frame and
 - Finally compute trust
 ```
 
