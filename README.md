@@ -92,7 +92,16 @@ You may find it helpful to consult the [Python controller code](https://github.c
 - The constants k_m and k_f are not given. Instead, the ration between them, kappa, is given.
 - The distance L is the distance from the center of the quad to one of the rotors.
 - Based on the input from the controller we can set the individual motor thrust commands.
-- F1, F2, F3, F4 to denote the individual thurst command for the front (left,right) and rear (left,right) motors.
+- F1, F2, F3, F4 for individual thurst command for the front (left,right) and rear (left,right) motors.
+- The l is a distance between x-axis and propeller location
+- l is equal to half of the distance between neighboring propellers at 45° relative to each axis:
+- Formulate the following 
+  Ft = collThrustCmd;         // F1+F2+F3+F4
+  Fp = momentCmd.x / l;       // F1-F2+F3-F4
+  Fq = momentCmd.y / l;       // F1+F2-F3-F4
+  Fr = - momentCmd.z / kappa; // F1-F2-F3+F4
+- Using above equations, we find individual values of F1, F2, F3, and F4.
+- Finally we clip them to min and max values and then pass these clipped values to the motors.
 ```
 
 ## Flight Evaluation ##
