@@ -28,6 +28,7 @@ You may find it helpful to consult the [Python controller code](https://github.c
 - kpPQR is a V3F used to store proportional gains on angular velocity on all axes
 - Simple proportional controller with error (pqrCmd - pqr) 
 - error indicates desired body rates [rad/s](pqrCmd) – current or estimated body rates [rad/s](pqr)
+- changes are reflected in [BodyRateControl](src/QuadControl.cpp#L113)
 ```    
 
 ### Implement roll pitch control in C++. ###
