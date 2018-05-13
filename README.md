@@ -51,6 +51,13 @@ You may find it helpful to consult the [Python controller code](https://github.c
 
 - changes are reflected in [AltitudeControl](src/QuadControl.cpp#L189-L200)
 ```
+- Purpose is to calculate desired quad thrust baed on comments listed in the code.
+- Based on altitude(actual, setpoint), vertical velocity (setpoint, actual), vertical acceleration feed-forward
+- Ensure z velocity command is within limits
+- Then we compute Error integration part of the PID
+- Determine desired acceleration
+- Determine desired vertical acceleration in body frame and
+- Finally compute trust
 ```
 
 ### Implement lateral position control in C++. ###
