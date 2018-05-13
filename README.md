@@ -49,22 +49,30 @@ You may find it helpful to consult the [Python controller code](https://github.c
 ### Implement altitude controller in C++. ###
 #### The controller should use both the down position and the down velocity to command thrust. Ensure that the output value is indeed thrust (the drone's mass needs to be accounted for) and that the thrust includes the non-linear effects from non-zero roll/pitch angles.Additionally, the C++ altitude controller should contain an integrator to handle the weight non-idealities presented in scenario 4. ####
 
-TBD
+- changes are reflected in [AltitudeControl](src/QuadControl.cpp#L189-L200)
+```
+```
 
 ### Implement lateral position control in C++. ###
 #### The controller should use the local NE position and velocity to generate a commanded local acceleration. ####
 
-TBD
+- changes are reflected in [LateralPositionControl](src/QuadControl.cpp#L234-L247)
+```
+```
 
 ### Implement yaw control in C++. ###
 #### The controller can be a linear/proportional heading controller to yaw rate commands (non-linear transformation not required). ####
 
-TBD
+- changes are reflected in [YawControl](src/QuadControl.cpp#L266-L270)
+```
+```
 
 ### Implement calculating the motor commands given commanded thrust and moments in C++. ###
 #### The thrust and moments should be converted to the appropriate 4 different desired thrust forces for the moments. Ensure that the dimensions of the drone are properly accounted for when calculating thrust from moments. ####
 
-TBD
+- changes are reflected in [GenerateMotorCommands](src/QuadControl.cpp#L71-L90)
+```
+```
 
 ## Flight Evaluation ##
 #### Your C++ controller is successfully able to fly the provided test trajectory and visually passes inspection of the scenarios leading up to the test trajectory. #####
