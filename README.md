@@ -34,7 +34,7 @@ You may find it helpful to consult the [Python controller code](https://github.c
 ### Implement roll pitch control in C++. ###
 #### The controller should use the acceleration and thrust commands, in addition to the vehicle attitude to output a body rate command. The controller should account for the non-linear transformation from local accelerations to body rates. Note that the drone's mass should be accounted for when calculating the target angles. ####
 
-- changes are reflected in RollPitchControl(src/QuadControl.cpp#L141-L161)
+- changes are reflected in [RollPitchControl](src/QuadControl.cpp#L141-L161)
 ```
 - Purpose is to calculate a desired pitch and roll rates 
 - Based on a desired global lateral acceleration, the current attitude, and desired collective thrust
