@@ -99,7 +99,7 @@ You may find it helpful to consult the [Python controller code](https://github.c
   Ft = collThrustCmd;         // F1+F2+F3+F4
   Fp = momentCmd.x / l;       // F1-F2+F3-F4
   Fq = momentCmd.y / l;       // F1+F2-F3-F4
-  Fr = - momentCmd.z / kappa; // F1-F2-F3+F4
+  Fr = momentCmd.z / kappa;   // F1-F2-F3+F4
 - Using above equations, we find individual values of F1, F2, F3, and F4.
 - Finally we clip them to min and max values and then pass these clipped values to the motors.
 ```
