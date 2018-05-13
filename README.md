@@ -108,4 +108,33 @@ You may find it helpful to consult the [Python controller code](https://github.c
 #### Your C++ controller is successfully able to fly the provided test trajectory and visually passes inspection of the scenarios leading up to the test trajectory. #####
 Ensure that in each scenario the drone looks stable and performs the required task. Specifically check that the student's controller is able to handle the non-linearities of scenario 4 (all three drones in the scenario should be able to perform the required task with the same control gains used). 
 
-TBD
+#### Scenario 1 – Intro ####
+<p align="center">
+<img src="images/Scenario1.PNG" width="800"/>
+</p>
+
+#### Scenario 2 – Attitude Control ####
+<p align="center">
+<img src="images/Scenario2.PNG" width="800"/>
+</p>
+
+#### Scenario 3 – Position Control ####
+<p align="center">
+<img src="images/Scenario2.PNG" width="800"/>
+</p>
+
+#### Scenario 4 – Nonidealities ####
+<p align="center">
+<img src="images/Scenario2.PNG" width="800"/>
+</p>
+
+#### Scenario 5 – Trajectory Follow ####
+<p align="center">
+<img src="images/Scenario2.PNG" width="800"/>
+</p>
+
+#### Python result for reference ####
+<p align="center">
+<img src="images/result.PNG" width="800"/>
+</p>
+- python repo https://github.com/vinayakkankanwadi/FCND-Controls
