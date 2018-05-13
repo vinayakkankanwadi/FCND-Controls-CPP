@@ -21,16 +21,12 @@ You may find it helpful to consult the [Python controller code](https://github.c
 #### The controller should be a proportional controller on body rates to commanded moments. The controller should take into account the moments of inertia of the drone when calculating the commanded moments. ####
 
 ```
-
-The commanded roll, pitch, and yaw are collected by the body rate controller, and they are translated into the desired rotational accelerations along the axis in the body frame. 
-This is a fairly simple control, where we mutluply the Inertia (x, y, z) components * the PQRError * kpPQR varaible. And that yields the momentCmd.
-
-momentCmd = Inertia * kpPQR * (pqrCmd - pqr);
-
-- Simple proportional controller with error = desired body rates [rad/s](pqrCmd) – current or estimated body rates [rad/s](pqr)
+- Body rate controller collects the commanded roll, pitch and yaw.
+- These are translated into desired rotational acceleration along the axis in the body frame(momentCmd).
+- Calculation:  momentCmd = I * kpPQR * (pqrCmd - pqr);
 - V3F structure is used to store moments of inertia in every asis (I)
 - kpPQR is a V3F used to store proportional gains on angular velocity on all axes
-
+- Simple proportional controller with error = desired body rates [rad/s](pqrCmd) – current or estimated body rates [rad/s](pqr)
 ```
 
     
