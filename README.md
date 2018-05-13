@@ -34,7 +34,17 @@ You may find it helpful to consult the [Python controller code](https://github.c
 ### Implement roll pitch control in C++. ###
 #### The controller should use the acceleration and thrust commands, in addition to the vehicle attitude to output a body rate command. The controller should account for the non-linear transformation from local accelerations to body rates. Note that the drone's mass should be accounted for when calculating the target angles. ####
 
-TBD
+- changes are reflected in RollPitchControl(src/QuadControl.cpp#L141-L161)
+```
+- Purpose is to calculate a desired pitch and roll rates 
+- Based on a desired global lateral acceleration, the current attitude, and desired collective thrust
+- First we obtain current tilt from the rotation matrix R.
+- Then we compute the desired tilt by normalizing the desired acceleration by the thrust. 
+- Prevent dron flipping usub max-min constrain
+- Determines the desired roll and pitch rate in the world frame
+- Finally, in order to output the desired roll and pitch rate in the body frame
+- Tuning kpBank and kpPQR(again until the drone flies more or less stable upward)
+```
 
 ### Implement altitude controller in C++. ###
 #### The controller should use both the down position and the down velocity to command thrust. Ensure that the output value is indeed thrust (the drone's mass needs to be accounted for) and that the thrust includes the non-linear effects from non-zero roll/pitch angles.Additionally, the C++ altitude controller should contain an integrator to handle the weight non-idealities presented in scenario 4. ####
