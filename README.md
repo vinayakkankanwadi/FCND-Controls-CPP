@@ -120,17 +120,17 @@ Ensure that in each scenario the drone looks stable and performs the required ta
 
 #### Scenario 3 – Position Control ####
 <p align="center">
-<img src="images/Scenario2.PNG" width="800"/>
+<img src="images/Scenario3.PNG" width="800"/>
 </p>
 
 #### Scenario 4 – Nonidealities ####
 <p align="center">
-<img src="images/Scenario2.PNG" width="800"/>
+<img src="images/Scenario4.PNG" width="800"/>
 </p>
 
 #### Scenario 5 – Trajectory Follow ####
 <p align="center">
-<img src="images/Scenario2.PNG" width="800"/>
+<img src="images/Scenario5.PNG" width="800"/>
 </p>
 
 #### Python result for reference ####
